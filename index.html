@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1><i class="fas fa-cloud-sun"></i> Weather App</h1>
+    <div class="search-container">
+      <div class="input-wrapper">
+        <i class="fas fa-search"></i>
+        <input type="text" id="city-input" placeholder="Enter city name">
+      </div>
+      <button id="search-btn">Search</button>
+      <button id="location-btn"><i class="fas fa-location-dot"></i></button>
+    </div>
+    <div id="weather-info" class="hidden">
+      <div class="weather-card">
+        <div class="weather-icon">
+          <img id="condition-icon" src="" alt="Weather condition">
+        </div>
+        <div class="weather-details">
+          <h2 id="location-name"></h2>
+          <div class="temperature">
+            <span id="temperature"></span>
+            <div class="unit-toggle">
+              <button id="celsius" class="active">°C</button>
+              <button id="fahrenheit">°F</button>
+            </div>
+          </div>
+          <p id="condition"></p>
+          <div class="additional-info">
+            <div>
+              <i class="fas fa-droplet"></i>
+              <span id="humidity"></span>
+            </div>
+            <div>
+              <i class="fas fa-wind"></i>
+              <span id="wind"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="loading" class="hidden">
+      <div class="spinner"></div>
+    </div>
+    <div id="error" class="hidden">
+      <p><i class="fas fa-exclamation-circle"></i> <span id="error-message"></span></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
